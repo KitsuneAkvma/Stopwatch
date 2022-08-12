@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--stylesheet-->
+    <link rel="stylesheet" href="public/css/main.css" />
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stopwatch (JS)</title>
+  </head>
+  <body>
+    <main>
+      <!--Stopwatch container-->
+      <div class="stopwatch">
+        <h1 class="stopwatch__title">js stopwatch</h1>
+        <h3 class="stopwatch__desc">
+          press start to run timer, stop to stop counting and reset to start
+          over.
+        </h3>
+
+        <div class="stopwatch__timer">
+          <div class="stopwatch__timer--hours">00</div>
+          <div class="stopwatch__timer--colon">:</div>
+          <div class="stopwatch__timer--minutes">00</div>
+          <div class="stopwatch__timer--colon">:</div>
+          <div class="stopwatch__timer--secs">00</div>
+          <div class="stopwatch__timer--colon">:</div>
+          <div class="stopwatch__timer--milisecs">00</div>
+        </div>
+        <!--NEED TO TO MAKE UL WITH BUTTONS AND MAKE FLEX-ROW-->
+        <!--starting the stoper-->
+        <ul class="stopwatch__btn-list">
+          <!--starting the stoper-->
+          <button class="stopwatch__btn-list__item" onClick="">start</button
+          ><!--pausing the stoper--><button
+            class="stopwatch__btn-list__item"
+            onClick=""
+          >
+            pause</button
+          ><!--reseting stoper to 00:00:00--><button
+            class="stopwatch__btn-list__item"
+            onClick=""
+          >
+            reset
+          </button>
+        </ul>
+      </div>
+    </main>
+    <script src="public/js/stopwatch.js"></script>
+  </body>
+</html>

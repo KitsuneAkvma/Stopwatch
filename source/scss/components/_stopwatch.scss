@@ -1,0 +1,54 @@
+body {
+  color: $text;
+  font-size: 16px;
+  font-family: 'Azeret Mono', monospace;
+
+  background-color: $primary;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 6rem 5rem;
+  &__timer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    font-size: 72px;
+  }
+  &__timer--colon {
+    text-align: justify;
+  }
+  &__btn-list {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  &__btn-list__item {
+    width: 15rem;
+    height: 4rem;
+
+    color: $text--button;
+    font-weight: $fnt-med;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+
+    border: none;
+    border-radius: 0.5rem;
+    background-color: $secondary;
+    cursor: pointer;
+    transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1),
+      background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      background-color: lighten($color: $secondary, $amount: 20%);
+      transform: scale(1.1);
+    }
+  }
+}
