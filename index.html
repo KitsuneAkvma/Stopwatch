@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!--Console error fix-->
+    <link rel="shortcut icon" href="#" />
     <title>Stopwatch (JS)</title>
   </head>
   <body>
@@ -27,28 +29,32 @@
           over.
         </h3>
 
-        <div class="stopwatch__timer">
-          <div class="stopwatch__timer--hours">00</div>
-          <div class="stopwatch__timer--colon">:</div>
-          <div class="stopwatch__timer--minutes">00</div>
-          <div class="stopwatch__timer--colon">:</div>
-          <div class="stopwatch__timer--secs">00</div>
-          <div class="stopwatch__timer--colon">:</div>
-          <div class="stopwatch__timer--milisecs">00</div>
-        </div>
+        <p class="stopwatch__timer">
+          <span class="stopwatch__timer--hours" id="hours">00</span>
+          :
+
+          <span class="stopwatch__timer--minutes" id="minutes">00</span>
+          :
+
+          <span class="stopwatch__timer--secs" id="seconds">00</span>
+          :
+
+          <span class="stopwatch__timer--milisecs" id="miliseconds">00</span>
+        </p>
         <!--NEED TO TO MAKE UL WITH BUTTONS AND MAKE FLEX-ROW-->
         <!--starting the stoper-->
         <ul class="stopwatch__btn-list">
           <!--starting the stoper-->
-          <button class="stopwatch__btn-list__item" onClick="">start</button
+          <button class="stopwatch__btn-list__item" onClick="runTimer()">
+            start</button
           ><!--pausing the stoper--><button
             class="stopwatch__btn-list__item"
-            onClick=""
+            onClick="pauseTimer()"
           >
             pause</button
           ><!--reseting stoper to 00:00:00--><button
             class="stopwatch__btn-list__item"
-            onClick=""
+            onClick="resetTimer()"
           >
             reset
           </button>
