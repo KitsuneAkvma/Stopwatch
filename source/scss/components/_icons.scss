@@ -1,0 +1,12 @@
+.icon {
+  position: absolute;
+  top: 15%;
+  left: 4%;
+  width: 45px;
+  height: 45px;
+  fill: $text--button;
+  &__reset {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -12,7 +12,18 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 5rem;
+  padding: 25vh 2rem 0;
+  &__title {
+    margin: 0;
+
+    font-size: 80px;
+    font-weight: $fnt-bld;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+  &__desc {
+    margin: 0;
+  }
   &__timer {
     display: flex;
     flex-direction: row;
@@ -31,8 +42,10 @@ body {
     padding: 0;
   }
   &__btn-list__item {
+    position: relative;
     width: 15rem;
     height: 4rem;
+    padding-left: 2rem;
 
     color: $text--button;
     font-weight: $fnt-med;
@@ -45,11 +58,19 @@ body {
     background-color: $secondary;
     cursor: pointer;
     transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1),
-      background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
+      background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1),
+      color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &__icon--use {
+      transition: fill 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
     &:hover {
-      background-color: lighten($color: $secondary, $amount: 20%);
+      color: mix($text--button, $secondary, 0);
+
+      background-color: mix($secondary, $accent, 0);
       transform: scale(1.1);
+    }
+    &:hover &__icon--use {
+      fill: $secondary;
     }
   }
 }

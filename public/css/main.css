@@ -310,11 +310,24 @@ template {
   display: none;
 }
 
+.icon {
+  position: absolute;
+  top: 15%;
+  left: 4%;
+  width: 45px;
+  height: 45px;
+  fill: #fffffe;
+}
+.icon__reset {
+  width: 30px;
+  height: 30px;
+}
+
 body {
   color: #2d334a;
   font-size: 16px;
   font-family: "Azeret Mono", monospace;
-  background-color: #fffffe;
+  background-color: #bae8e8;
 }
 
 .stopwatch {
@@ -323,7 +336,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 6rem 5rem;
+  padding: 25vh 2rem 0;
+}
+.stopwatch__title {
+  margin: 0;
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.stopwatch__desc {
+  margin: 0;
 }
 .stopwatch__timer {
   display: flex;
@@ -342,20 +365,29 @@ body {
   padding: 0;
 }
 .stopwatch__btn-list__item {
+  position: relative;
   width: 15rem;
   height: 4rem;
-  color: #272343;
+  padding-left: 2rem;
+  color: #fffffe;
   font-weight: 500;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   border: none;
   border-radius: 0.5rem;
-  background-color: #ffd803;
+  background-color: #272343;
   cursor: pointer;
-  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1), color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.stopwatch__btn-list__item__icon--use {
+  transition: fill 3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .stopwatch__btn-list__item:hover {
-  background-color: #ffe869;
+  color: #272343;
+  background-color: #ffd803;
   transform: scale(1.1);
+}
+.stopwatch__btn-list__item:hover .stopwatch__btn-list__item__icon--use {
+  fill: #272343;
 }/*# sourceMappingURL=main.css.map */

@@ -25,8 +25,8 @@
       <div class="stopwatch">
         <h1 class="stopwatch__title">js stopwatch</h1>
         <h3 class="stopwatch__desc">
-          press start to run timer, stop to stop counting and reset to start
-          over.
+          Do not let time to set your limits, set limit to time and break your
+          limits.
         </h3>
 
         <p class="stopwatch__timer">
@@ -46,17 +46,32 @@
         <ul class="stopwatch__btn-list">
           <!--starting the stoper-->
           <button class="stopwatch__btn-list__item" onClick="runTimer()">
-            start</button
+            <svg class="icon icon--play">
+              <use
+                class="stopwatch__btn-list__item__icon--use"
+                href="public\images\svg\icons.svg#icon-play"
+              ></use></svg
+            >start</button
           ><!--pausing the stoper--><button
             class="stopwatch__btn-list__item"
             onClick="pauseTimer()"
           >
-            pause</button
+            <svg class="icon icon--play">
+              <use
+                class="stopwatch__btn-list__item__icon--use"
+                href="public\images\svg\icons.svg#icon-pause"
+              ></use></svg
+            >pause</button
           ><!--reseting stoper to 00:00:00--><button
             class="stopwatch__btn-list__item"
             onClick="resetTimer()"
           >
-            reset
+            <svg class="icon icon--play">
+              <use
+                class="stopwatch__btn-list__item__icon--use"
+                href="public\images\svg\icons.svg#icon-reset"
+              ></use></svg
+            >reset
           </button>
         </ul>
       </div>
