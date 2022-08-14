@@ -1,0 +1,49 @@
+@media (max-width: 950px) {
+  .stopwatch {
+    &__title {
+      font-size: 50px;
+    }
+    &__timer {
+      font-size: 60px;
+      gap: 0.5rem;
+    }
+    &__btn-list {
+      row-gap: 0.5rem;
+      column-gap: 5rem;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .stopwatch {
+    &__title {
+      font-size: 30px;
+    }
+    &__desc {
+      position: absolute;
+      display: none;
+      &--2 {
+        display: block;
+      }
+    }
+    &__timer {
+      gap: 0;
+      font-size: 42px;
+    }
+    &__btn-list {
+      column-gap: 1.5rem;
+      row-gap: 1rem;
+    }
+    &__btn-list__item {
+      width: 9rem;
+      height: 4rem;
+      padding-left: 3rem;
+
+      font-size: 18px;
+    }
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    top: 17%;
+  }
+}

@@ -12,7 +12,9 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 25vh 2rem 0;
+  width: 100vw;
+  height: 100vh;
+
   &__title {
     margin: 0;
 
@@ -20,9 +22,17 @@ body {
     font-weight: $fnt-bld;
     text-transform: uppercase;
     letter-spacing: 0.2em;
+    text-align: center;
+    line-height: 1.5em;
   }
   &__desc {
     margin: 0;
+    text-align: center;
+    &--2 {
+      margin: 0;
+      text-align: center;
+      display: none;
+    }
   }
   &__timer {
     display: flex;
@@ -37,6 +47,8 @@ body {
   }
   &__btn-list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin: 0;
     padding: 0;

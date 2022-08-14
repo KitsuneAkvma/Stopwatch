@@ -336,7 +336,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 25vh 2rem 0;
+  width: 100vw;
+  height: 100vh;
 }
 .stopwatch__title {
   margin: 0;
@@ -344,9 +345,17 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  text-align: center;
+  line-height: 1.5em;
 }
 .stopwatch__desc {
   margin: 0;
+  text-align: center;
+}
+.stopwatch__desc--2 {
+  margin: 0;
+  text-align: center;
+  display: none;
 }
 .stopwatch__timer {
   display: flex;
@@ -360,6 +369,8 @@ body {
 }
 .stopwatch__btn-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin: 0;
   padding: 0;
@@ -390,4 +401,51 @@ body {
 }
 .stopwatch__btn-list__item:hover .stopwatch__btn-list__item__icon--use {
   fill: #272343;
+}
+
+@media (max-width: 950px) {
+  .stopwatch__title {
+    font-size: 50px;
+  }
+  .stopwatch__timer {
+    font-size: 60px;
+    gap: 0.5rem;
+  }
+  .stopwatch__btn-list {
+    row-gap: 0.5rem;
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+}
+@media (max-width: 560px) {
+  .stopwatch__title {
+    font-size: 30px;
+  }
+  .stopwatch__desc {
+    position: absolute;
+    display: none;
+  }
+  .stopwatch__desc--2 {
+    display: block;
+  }
+  .stopwatch__timer {
+    gap: 0;
+    font-size: 42px;
+  }
+  .stopwatch__btn-list {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+    row-gap: 1rem;
+  }
+  .stopwatch__btn-list__item {
+    width: 9rem;
+    height: 4rem;
+    padding-left: 3rem;
+    font-size: 18px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    top: 17%;
+  }
 }/*# sourceMappingURL=main.css.map */
